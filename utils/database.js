@@ -8,15 +8,12 @@ export const connectToDB = async () => {
         return;
     }
     try {
-        await mongoose.connection(process.env.MONOGO_URI, {
-            dbName: "share_prompt",
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        })
+        await mongoose.connect(process.env.MONGO_URI)
         isConnected = true;
         console.log('MonogoDB Connected');
     }
     catch (error) {
         console.log('Error connecting to DB', error);
+        throw new Error('Error connecting to DB');
     }
 }
