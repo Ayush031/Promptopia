@@ -72,7 +72,7 @@ const Nav = () => {
                 className="rounded-full"
                 alt="profile"
                 // loader={loaderProp}
-                unoptimized
+                // unoptimized
               />
             </Link>
           </div>
@@ -104,7 +104,7 @@ const Nav = () => {
               onClick={() => setToggleDropdown(!toggleDropdown)}
               aria-label="Profile menu"
               // loader={loaderProp}
-              unoptimized
+              // unoptimized
             />
 
             {toggleDropdown && (
