@@ -103,8 +103,8 @@ const Nav = () => {
               alt="profile"
               onClick={() => setToggleDropdown(!toggleDropdown)}
               aria-label="Profile menu"
-              loader={loaderProp}
-              // unoptimized
+              // loader={loaderProp}
+              unoptimized
             />
 
             {toggleDropdown && (
