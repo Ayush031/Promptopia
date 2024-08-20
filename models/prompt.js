@@ -1,8 +1,8 @@
-import { model, models, Schema } from "mongoose";
+import mongoose from "mongoose";
 
-const promptSchema = new Schema({
+const promptSchema = new mongoose.Schema({
     creator: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     },
     prompt: {
@@ -15,5 +15,5 @@ const promptSchema = new Schema({
     },
 });
 
-const Prompt = models.Prompt || model("Prompt", promptSchema);
+const Prompt = mongoose.models.Prompt || mongoose.model("Prompt", promptSchema);
 export default Prompt;
